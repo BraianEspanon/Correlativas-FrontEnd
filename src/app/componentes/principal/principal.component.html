@@ -1,0 +1,28 @@
+<h1>principal works!</h1>
+
+<app-curriculares
+    [dataSource]="datosCurriculares">
+</app-curriculares>
+
+<app-electivas
+    [dataSource]="datosElectivas"
+    (enviarMensaje)="recibirMensaje($event)"
+    >
+</app-electivas>
+    
+<p></p>
+<div class="contenedor">
+<button class="button"
+    mat-flat-button
+    color="primary"
+    (click)="reiniciarPlan()">
+    Reiniciar plan
+</button>
+
+<button class="button"
+    mat-flat-button
+    color="primary"
+    (click)="guardarCambios()">
+    Guardar cambios
+</button>
+</div>

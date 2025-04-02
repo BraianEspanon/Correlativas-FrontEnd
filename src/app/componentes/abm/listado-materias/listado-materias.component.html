@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>listado-materias works!</h2>
+<mat-dialog-content>
+    <mat-table multiTemplateDataRows #table [dataSource]="listaMaterias">
+        <ng-container matColumnDef="checkBox">
+            <mat-header-cell *matHeaderCellDef class="header"> Requerido </mat-header-cell>
+            <mat-cell *matCellDef="let materia">
+                <mat-checkbox 
+                [checked]="selectedMap[materia.id]"
+                (change)="toggleSelection(materia.id)">
+            </mat-checkbox>
+        </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef class="header"> ID </mat-header-cell>
+            <mat-cell *matCellDef="let materia"> {{materia.getId()}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="nombre">
+            <mat-header-cell *matHeaderCellDef class="header"> Nombre </mat-header-cell>
+            <mat-cell *matCellDef="let materia"> {{materia.getNombre()}} </mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button class="button" mat-dialog-close>Cancelar</button>
+    <button mat-raised-button class="button" (click)="limpiarSelecciones()">Limpiar</button>
+    <button mat-raised-button class="button" (click)="devolverSelecciones()">Confirmar</button>
+</mat-dialog-actions>

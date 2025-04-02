@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Detalles del plan de estudio</h2>
+<button mat-flat-button (click)="agregarNuevoDetalle()" class="button-agregar" color="primary">Agregar nuevo detalle</button>
+<mat-dialog-content>
+    <mat-table multiTemplateDataRows #table [dataSource]="dataSource">
+        <ng-container matColumnDef="orden">
+            <mat-header-cell *matHeaderCellDef class="header"> Orden </mat-header-cell>
+            <mat-cell *matCellDef="let detalle; let i = index">{{detalle.getIdToString()}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="materia">
+            <mat-header-cell *matHeaderCellDef class="header"> Materia </mat-header-cell>
+            <mat-cell *matCellDef="let detalle"> {{detalle.getMateria()}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="regulares">
+            <mat-header-cell *matHeaderCellDef class="header"> Regulares </mat-header-cell>
+            <mat-cell *matCellDef="let detalle"> 
+                <button mat-stroked-button (click)="agregarRegulares(detalle)">
+                    {{detalle.getCantRegulares()}} 
+                </button>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="aprobadas">
+            <mat-header-cell *matHeaderCellDef class="header"> Aprobadas </mat-header-cell>
+            <mat-cell *matCellDef="let detalle">
+                <button mat-stroked-button (click)="agregarAprobadas(detalle)">
+                    {{detalle.getCantAprobadas()}} 
+                </button></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="cambioAño">
+            <mat-header-cell *matHeaderCellDef class="header">Cambio de año</mat-header-cell>
+            <mat-cell *matCellDef="let detalle">
+                <mat-checkbox [(ngModel)]="detalle.cambioAnio"></mat-checkbox>
+            </mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="electiva">
+            <mat-header-cell *matHeaderCellDef class="header">Electiva</mat-header-cell>
+            <mat-cell *matCellDef="let detalle">
+                <mat-checkbox [(ngModel)]="detalle.electiva"></mat-checkbox>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="eliminar">
+            <mat-header-cell *matHeaderCellDef class="header"> Eliminar </mat-header-cell>
+            <mat-cell *matCellDef="let detalle">
+                <button mat-icon-button (click)="eliminarDetalle(detalle)">
+                    <mat-icon class="icon-close">close</mat-icon>
+                </button>
+            </mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button class="button" mat-dialog-close>Cancelar</button>
+    <button mat-raised-button class="button" (click)="confirmar()">Confirmar</button>
+</mat-dialog-actions>

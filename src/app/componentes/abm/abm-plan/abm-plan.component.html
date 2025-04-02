@@ -1,0 +1,22 @@
+<div class="container">
+    <mat-label class="titulo">ABM Plan de estudio</mat-label>
+    <p>
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input matInput [(ngModel)]="id"/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="nombre"/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-label>Generar detalle: </mat-label>
+        <button mat-raised-button class="button" (click)="generarDetalles()">{{cantDetalles}}</button>
+    </p>
+    <p>
+        <button mat-raised-button class="button" (click)="crearPlan()">Confirmar</button>
+    </p>
+</div>

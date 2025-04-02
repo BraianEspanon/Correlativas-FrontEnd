@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-label class="titulo">ABM Materia</mat-label>
+    <p>
+        <mat-form-field>
+          <mat-label>Id</mat-label>
+          <input matInput [(ngModel)]="id"/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="nombre"/>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+          <mat-label>Modalidad</mat-label>
+          <input matInput [(ngModel)]="modalidad"/>
+        </mat-form-field>
+    </p>
+    <!--
+        <p>
+            <mat-label>Materias regulares</mat-label>
+            <button mat-raised-button class="button" (click)="agregarRegulares()">{{regularesSeleccionadas}}</button>
+        </p>
+        <p>
+            <mat-label>Materias aprobadas</mat-label>
+            <button mat-raised-button class="button" (click)="agregarAprobadas()">{{aprobadasSeleccionadas}}</button>
+        </p>
+    -->
+    <p>
+        <button mat-raised-button class="button" (click)="crearMateria()">Confirmar</button>
+    </p>
+</div>
