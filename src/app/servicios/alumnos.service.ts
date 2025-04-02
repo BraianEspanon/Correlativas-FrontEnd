@@ -53,7 +53,7 @@ export class AlumnosService {
       return of(condiciones); // `of` crea un Observable a partir de los datos existentes
     } else {
       // Si no están en Local Storage, hacer la solicitud HTTP
-      return this.getCondicionesAlumnoHTTP().pipe(
+      return this.leerJson().pipe(
         tap((res: CondicionDTO[]) => {
           // Guardar en Local Storage y en el servicio una vez que llegan los datos
           localStorage.setItem('condiciones', JSON.stringify(res));
@@ -64,7 +64,7 @@ export class AlumnosService {
   }
 
   getCondicionesAlumnoHTTP(){
-    return this.http.get<CondicionDTO[]>('http://localhost:8080/alumnos/condiciones/7580')
+    return this.http.get<CondicionDTO[]>('http://localhost:8080/alumnos/condiciones/1')
     
   }
   guardarCambiosCondiciones(condiciones : CondicionDTO[]){

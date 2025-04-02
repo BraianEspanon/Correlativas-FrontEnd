@@ -16,6 +16,7 @@ import { CondicionDTO } from '../../DTOs/CondicionDTO';
 export class PrincipalComponent implements OnInit{
   datosCurriculares: CondicionDTO[] = [];
   datosElectivas: CondicionDTO[] = [];
+  datosCompletos: CondicionDTO[] = [];
   @ViewChild(CurricularesComponent) curricularesComponent!: CurricularesComponent;
 
   constructor(private servicioAlumno: AlumnosService,
@@ -25,8 +26,8 @@ export class PrincipalComponent implements OnInit{
 
   ngOnInit(): void {
     this.servicioAlumno.getCondicionesAlumno(1).subscribe((res : CondicionDTO[])=>{
+      this.datosCompletos = res
         for (var condicion of res){
-          console.log(condicion)
           if (condicion.electiva){
             this.datosElectivas.push(condicion)
           }
@@ -45,7 +46,7 @@ export class PrincipalComponent implements OnInit{
 
   guardarCambios(){
     if (confirm("¿Está seguro que desea guardar?")){
-      this.servicioAlumno.guardarCambiosCondiciones(this.datosCurriculares)
+      this.servicioAlumno.guardarCambiosCondiciones(this.datosCompletos)
       alert("Se ha guardado con éxito")
     }
   }
@@ -54,11 +55,12 @@ export class PrincipalComponent implements OnInit{
       if (confirm("¿Está seguro que desea reiniciar las condiciones del plan?")){
   
         this.servicioAlumno.reiniciarPlan().subscribe((res : CondicionDTO[])=>{
-          this.datosCurriculares = res
+          this.datosCompletos = res
           this.servicioCondicion.setCondiciones(res);
         })
       
         alert("Se reinició el plan correctamente")
+        location.reload()
       }
     }
   

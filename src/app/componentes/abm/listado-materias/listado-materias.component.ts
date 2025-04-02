@@ -18,6 +18,7 @@ import { MateriasService } from '../../../servicios/materias.service';
 import { Materia } from '../../../entidades/Materia';
 
 export interface DialogData {
+  listaMateria: Materia[];
   materias: Materia[]
 }
 
@@ -32,7 +33,7 @@ export interface DialogData {
 export class ListadoMateriasComponent implements OnInit {
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);
 
-  listaMaterias :Materia[] = [];
+  listaMaterias : Materia[] = [];
   displayedColumns: string[] = ['checkBox', 'id', 'nombre'];
   selectedMap: { [id: string]: boolean } = {};
   constructor(private servicioMateria: MateriasService, 
@@ -40,8 +41,9 @@ export class ListadoMateriasComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.servicioMateria.getMateriasHttp().subscribe(data => this.listaMaterias = data)
-    if (this.data){
+    this.listaMaterias = this.data.listaMateria;
+    
+    if (this.data.materias){
       for (let i = 0; i < this.data.materias.length; i++){
         let idMateriaSeleccionada = this.data.materias[i].getId()
         this.toggleSelection(idMateriaSeleccionada)

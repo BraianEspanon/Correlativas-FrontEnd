@@ -2,10 +2,6 @@
 <button mat-flat-button (click)="agregarNuevoDetalle()" class="button-agregar" color="primary">Agregar nuevo detalle</button>
 <mat-dialog-content>
     <mat-table multiTemplateDataRows #table [dataSource]="dataSource">
-        <ng-container matColumnDef="orden">
-            <mat-header-cell *matHeaderCellDef class="header"> Orden </mat-header-cell>
-            <mat-cell *matCellDef="let detalle; let i = index">{{detalle.getIdToString()}}</mat-cell>
-        </ng-container>
 
         <ng-container matColumnDef="materia">
             <mat-header-cell *matHeaderCellDef class="header"> Materia </mat-header-cell>

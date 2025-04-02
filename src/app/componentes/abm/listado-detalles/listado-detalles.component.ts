@@ -40,7 +40,7 @@ export class ListadoDetallesComponent implements OnInit {
   readonly dialog = inject(MatDialog);
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);
   plan: PlanEstudio | undefined;
-  displayedColumns: string[] = ['orden', 'materia', 'regulares', 'aprobadas', 'cambioAño', 'electiva', 'eliminar'];
+  displayedColumns: string[] = ['materia', 'regulares', 'aprobadas', 'cambioAño', 'electiva', 'eliminar'];
   checked = false
   listaDetalles: DetallePlan[] = []
   dataSource = new DataSourceDetallePlan(this.listaDetalles);
@@ -69,7 +69,12 @@ export class ListadoDetallesComponent implements OnInit {
   }
 
   agregarNuevoDetalle(){
-    let dialogMateria = this.dialog.open(ListadoMateriasComponent)
+    this.servicioMateria.getMateriasHttp().subscribe(res => {
+      console.log(res)
+      let dialogMateria = this.dialog.open(ListadoMateriasComponent, {
+        data: {listaMateria : res}
+      })
+      
     dialogMateria.afterClosed().subscribe((result: Materia[]) => {
       if (result !== undefined && result.length === 1){
         console.log(result[0])
@@ -82,6 +87,7 @@ export class ListadoDetallesComponent implements OnInit {
         }
       }
     });
+    })
   }
 
   limpiar(){
@@ -105,7 +111,9 @@ export class ListadoDetallesComponent implements OnInit {
     console.log(this.listaDetalles)
     let listaMaterias : Materia[] = []
     let dialogMateria = this.dialog.open(ListadoMateriasComponent, {
-      data: {materias : detalle.regulares}
+      data: {materias : detalle.regulares,
+        listaMateria : this.listaDetalles.map(detalle => detalle.getMateria())
+      }
     })
     dialogMateria.afterClosed().subscribe((result: Materia[]) => {
       if (result.length > 0){
@@ -117,7 +125,9 @@ export class ListadoDetallesComponent implements OnInit {
   agregarAprobadas(detalle: any){
     let listaMaterias : Materia[] = []
     let dialogMateria = this.dialog.open(ListadoMateriasComponent, {
-      data: {materias : detalle.aprobadas}
+      data: {materias : detalle.aprobadas,
+        listaMateria : this.listaDetalles.map(detalle => detalle.getMateria())
+      }
     })
     dialogMateria.afterClosed().subscribe((result: Materia[]) => {
       if (result.length > 0){

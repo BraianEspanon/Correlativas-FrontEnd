@@ -1,1106 +1,1456 @@
 [
-    {
-      "condicionId": 1,
-      "detalleMateria": {
+  {
+    "condicionId": "AM1",
+    "detalleMateria": {
+      "id": "AM1",
+      "nombre": "Análisis Matemático I",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "AGA",
+    "detalleMateria": {
+      "id": "AGA",
+      "nombre": "Álgebra y Geometría Analítica",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Fis1",
+    "detalleMateria": {
+      "id": "Fis1",
+      "nombre": "Física I",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Ing1",
+    "detalleMateria": {
+      "id": "Ing1",
+      "nombre": "Inglés 1",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "LED",
+    "detalleMateria": {
+      "id": "LED",
+      "nombre": "Lógica y Estructuras Discretas",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "AED",
+    "detalleMateria": {
+      "id": "AED",
+      "nombre": "Algoritmo y Estructura de Datos",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "ACO",
+    "detalleMateria": {
+      "id": "ACO",
+      "nombre": "Arquitectura de Computadoras",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SPN",
+    "detalleMateria": {
+      "id": "SPN",
+      "nombre": "Sistemas y Proceso de Negocios",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "ISO",
+    "detalleMateria": {
+      "id": "ISO",
+      "nombre": "Ingeniería y Sociedad",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": true,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "AM2",
+    "detalleMateria": {
+      "id": "AM2",
+      "nombre": "Análisis Matemático II",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [
+      {
         "id": "AM1",
-        "nombre": "Análisis Matemático 1",
+        "nombre": "Análisis Matemático I",
         "modalidad": "A"
       },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 2,
-      "detalleMateria": {
+      {
         "id": "AGA",
         "nombre": "Álgebra y Geometría Analítica",
         "modalidad": "A"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Fis2",
+    "detalleMateria": {
+      "id": "Fis2",
+      "nombre": "Física II",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 3,
-      "detalleMateria": {
-        "id": "Fis1",
-        "nombre": "Física 1",
+    "detalleRegulares": [
+      {
+        "id": "AM1",
+        "nombre": "Análisis Matemático I",
         "modalidad": "A"
       },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "Fis1",
+        "nombre": "Física I",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Ing2",
+    "detalleMateria": {
+      "id": "Ing2",
+      "nombre": "Inglés II",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 4,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
         "id": "Ing1",
         "nombre": "Inglés 1",
         "modalidad": "A"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SSL",
+    "detalleMateria": {
+      "id": "SSL",
+      "nombre": "Sintaxis y Semántica de los Lenguajes",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 5,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
         "id": "LED",
         "nombre": "Lógica y Estructuras Discretas",
         "modalidad": "C"
       },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 6,
-      "detalleMateria": {
+      {
         "id": "AED",
-        "nombre": "Algoritmos y Estructuras de Datos",
+        "nombre": "Algoritmo y Estructura de Datos",
         "modalidad": "A"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "PPR",
+    "detalleMateria": {
+      "id": "PPR",
+      "nombre": "Paradigmas de Programación",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 7,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "LED",
+        "nombre": "Lógica y Estructuras Discretas",
+        "modalidad": "C"
+      },
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SOP",
+    "detalleMateria": {
+      "id": "SOP",
+      "nombre": "Sistemas Operativos",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [
+      {
         "id": "ACO",
         "nombre": "Arquitectura de Computadoras",
         "modalidad": "C"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "ASI",
+    "detalleMateria": {
+      "id": "ASI",
+      "nombre": "Análisis de Sistemas de Información (Int)",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 8,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      },
+      {
         "id": "SPN",
-        "nombre": "Sistemas y Procesos de Negocio",
+        "nombre": "Sistemas y Proceso de Negocios",
         "modalidad": "C"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "PYE",
+    "detalleMateria": {
+      "id": "PYE",
+      "nombre": "Probabilidad y Estadística",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 9,
-      "detalleMateria": {
-        "id": "ISO",
-        "nombre": "Ingeniería y Sociedad",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": true,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 10,
-      "detalleMateria": {
-        "id": "AM2",
-        "nombre": "Análisis Matemático 2",
+    "detalleRegulares": [
+      {
+        "id": "AM1",
+        "nombre": "Análisis Matemático I",
         "modalidad": "A"
       },
-      "detalleRegulares": [
-        {
-          "id": "AM1",
-          "nombre": "Análisis Matemático 1",
-          "modalidad": "A"
-        },
-        {
-          "id": "AGA",
-          "nombre": "Álgebra y Geometría Analítica",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "AGA",
+        "nombre": "Álgebra y Geometría Analítica",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": true,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "ECO",
+    "detalleMateria": {
+      "id": "ECO",
+      "nombre": "Economía",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 11,
-      "detalleMateria": {
-        "id": "Fis2",
-        "nombre": "Física 2",
+    "detalleRegulares": [],
+    "detalleAprobadas": [
+      {
+        "id": "AM1",
+        "nombre": "Análisis Matemático I",
         "modalidad": "A"
       },
-      "detalleRegulares": [
-        {
-          "id": "AM1",
-          "nombre": "Análisis Matemático 1",
-          "modalidad": "A"
-        },
-        {
-          "id": "Fis1",
-          "nombre": "Física 1",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 12,
-      "detalleMateria": {
-        "id": "Ing2",
-        "nombre": "Inglés 2",
+      {
+        "id": "AGA",
+        "nombre": "Álgebra y Geometría Analítica",
         "modalidad": "A"
-      },
-      "detalleRegulares": [
-        {
-          "id": "Ing1",
-          "nombre": "Inglés 1",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "BDD",
+    "detalleMateria": {
+      "id": "BDD",
+      "nombre": "Base de Datos",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 13,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
         "id": "SSL",
         "nombre": "Sintaxis y Semántica de los Lenguajes",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "LED",
-          "nombre": "Lógica y Estructuras Discretas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "LED",
+        "nombre": "Lógica y Estructuras Discretas",
+        "modalidad": "C"
+      },
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "DDS",
+    "detalleMateria": {
+      "id": "DDS",
+      "nombre": "Desarrollo de Software",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 14,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
         "id": "PPR",
         "nombre": "Paradigmas de Programación",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "LED",
-          "nombre": "Lógica y Estructuras Discretas",
-          "modalidad": "C"
-        },
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 15,
-      "detalleMateria": {
-        "id": "SOP",
-        "nombre": "Sistemas Operativos",
-        "modalidad": "A"
-      },
-      "detalleRegulares": [
-        {
-          "id": "ACO",
-          "nombre": "Arquitectura de Computadoras",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 16,
-      "detalleMateria": {
+      {
         "id": "ASI",
-        "nombre": "Análisis de Sistemas de Información (Integradora)",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "LED",
+        "nombre": "Lógica y Estructuras Discretas",
+        "modalidad": "C"
+      },
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "COM",
+    "detalleMateria": {
+      "id": "COM",
+      "nombre": "Comunicación de Datos",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [],
+    "detalleAprobadas": [
+      {
+        "id": "Fis1",
+        "nombre": "Física I",
         "modalidad": "A"
       },
-      "detalleRegulares": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "SPN",
-          "nombre": "Sistemas y Procesos de Negocio",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "ACO",
+        "nombre": "Arquitectura de Computadoras",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "AN",
+    "detalleMateria": {
+      "id": "AN",
+      "nombre": "Análisis Numérico",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 17,
-      "detalleMateria": {
-        "id": "PYE",
-        "nombre": "Probabilidad y Estadísticas",
+    "detalleRegulares": [
+      {
+        "id": "AM2",
+        "nombre": "Análisis Matemático II",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "AM1",
+        "nombre": "Análisis Matemático I",
+        "modalidad": "A"
+      },
+      {
+        "id": "AGA",
+        "nombre": "Álgebra y Geometría Analítica",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "DSI",
+    "detalleMateria": {
+      "id": "DSI",
+      "nombre": "Diseño de Sistemas de Información (Int)",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "AM1",
-          "nombre": "Análisis Matemático 1",
-          "modalidad": "A"
-        },
-        {
-          "id": "AGA",
-          "nombre": "Álgebra y Geometría Analítica",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": true,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 18,
-      "detalleMateria": {
-        "id": "Economia",
-        "nombre": "Economía",
-        "modalidad": "C"
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "Ing1",
+        "nombre": "Inglés 1",
+        "modalidad": "A"
       },
-      "detalleRegulares": [],
-      "detalleAprobadas": [
-        {
-          "id": "AGA",
-          "nombre": "Álgebra y Geometría Analítica",
-          "modalidad": "A"
-        },
-        {
-          "id": "AM1",
-          "nombre": "Análisis Matemático 1",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      },
+      {
+        "id": "SPN",
+        "nombre": "Sistemas y Proceso de Negocios",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": true,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "LEG",
+    "detalleMateria": {
+      "id": "LEG",
+      "nombre": "Legislación",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 19,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "ISO",
+        "nombre": "Ingeniería y Sociedad",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "ICS",
+    "detalleMateria": {
+      "id": "ICS",
+      "nombre": "Ingeniería y Calidad de Software",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
         "id": "BDD",
-        "nombre": "Bases de Datos",
+        "nombre": "Base de Datos",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        },
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "LED",
-          "nombre": "Lógica y Estructuras Discretas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 20,
-      "detalleMateria": {
+      {
         "id": "DDS",
         "nombre": "Desarrollo de Software",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        },
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "LED",
-          "nombre": "Lógica y Estructuras Discretas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "DSI",
+        "nombre": "Diseño de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
+        "modalidad": "C"
+      },
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "RDD",
+    "detalleMateria": {
+      "id": "RDD",
+      "nombre": "Redes de Datos",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 21,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "SOP",
+        "nombre": "Sistemas Operativos",
+        "modalidad": "A"
+      },
+      {
         "id": "COM",
         "nombre": "Comunicación de Datos",
         "modalidad": "A"
-      },
-      "detalleRegulares": [],
-      "detalleAprobadas": [
-        {
-          "id": "ACO",
-          "nombre": "Arquitectura de Computadoras",
-          "modalidad": "C"
-        },
-        {
-          "id": "Fis1",
-          "nombre": "Física 1",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "IOP",
+    "detalleMateria": {
+      "id": "IOP",
+      "nombre": "Investigación Operativa",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 22,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "PYE",
+        "nombre": "Probabilidad y Estadística",
+        "modalidad": "C"
+      },
+      {
         "id": "AN",
         "nombre": "Análisis Numérico",
         "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "AM2",
-          "nombre": "Análisis Matemático 2",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AGA",
-          "nombre": "Álgebra y Geometría Analítica",
-          "modalidad": "A"
-        },
-        {
-          "id": "AM1",
-          "nombre": "Análisis Matemático 1",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleAprobadas": [],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SIM",
+    "detalleMateria": {
+      "id": "SIM",
+      "nombre": "Simulación",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 23,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "PYE",
+        "nombre": "Probabilidad y Estadística",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "AM2",
+        "nombre": "Análisis Matemático II",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "TA",
+    "detalleMateria": {
+      "id": "TA",
+      "nombre": "Tecnologías Para la Automatización",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "Fis2",
+        "nombre": "Física II",
+        "modalidad": "A"
+      },
+      {
+        "id": "AN",
+        "nombre": "Análisis Numérico",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "AM2",
+        "nombre": "Análisis Matemático II",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "AS",
+    "detalleMateria": {
+      "id": "AS",
+      "nombre": "Administración de Sistemas de Información(Int)",
+      "modalidad": "A"
+    },
+    "detalleRegulares": [
+      {
+        "id": "ECO",
+        "nombre": "Economía",
+        "modalidad": "C"
+      },
+      {
         "id": "DSI",
-        "nombre": "Diseño de Sistemas de Información (Integradora)",
+        "nombre": "Diseño de Sistemas de Información (Int)",
         "modalidad": "A"
-      },
-      "detalleRegulares": [
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        },
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "Ing1",
-          "nombre": "Inglés 1",
-          "modalidad": "A"
-        },
-        {
-          "id": "SPN",
-          "nombre": "Sistemas y Procesos de Negocio",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 24,
-      "detalleMateria": {
-        "id": "Seminario",
-        "nombre": "Seminario Integrador (Analista)",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        },
-        {
-          "id": "SPN",
-          "nombre": "Sistemas y Procesos de Negocio",
-          "modalidad": "C"
-        },
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": true,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 25,
-      "detalleMateria": {
-        "id": "Legislacion",
-        "nombre": "Legislación",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "ISO",
-          "nombre": "Ingeniería y Sociedad",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 26,
-      "detalleMateria": {
-        "id": "ISW",
-        "nombre": "Ingeniería y Calidad de Software",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "BDD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        },
-        {
-          "id": "DDS",
-          "nombre": "Desarrollo de Software",
-          "modalidad": "C"
-        },
-        {
-          "id": "DSI",
-          "nombre": "Diseño de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        },
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 27,
-      "detalleMateria": {
-        "id": "RED",
-        "nombre": "Redes de Datos",
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
         "modalidad": "A"
-      },
-      "detalleRegulares": [
-        {
-          "id": "SOP",
-          "nombre": "Sistemas Operativos",
-          "modalidad": "A"
-        },
-        {
-          "id": "COM",
-          "nombre": "Comunicación de Datos",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleCambioAnio": true,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "IA",
+    "detalleMateria": {
+      "id": "IA",
+      "nombre": "Inteligencia Artificial",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 28,
-      "detalleMateria": {
-        "id": "IOP",
-        "nombre": "Investigación Operativa",
-        "modalidad": "A"
-      },
-      "detalleRegulares": [
-        {
-          "id": "PYE",
-          "nombre": "Probabilidad y Estadísticas",
-          "modalidad": "C"
-        },
-        {
-          "id": "AN",
-          "nombre": "Análisis Numérico",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 29,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
         "id": "SIM",
         "nombre": "Simulación",
         "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "PYE",
-          "nombre": "Probabilidad y Estadísticas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AM2",
-          "nombre": "Análisis Matemático 2",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 30,
-      "detalleMateria": {
-        "id": "TA",
-        "nombre": "Tecnologías para la Automatización",
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "PYE",
+        "nombre": "Probabilidad y Estadística",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "Fis2",
-          "nombre": "Física 2",
-          "modalidad": "A"
-        },
-        {
-          "id": "AN",
-          "nombre": "Análisis Numérico",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AM2",
-          "nombre": "Análisis Matemático 2",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      {
+        "id": "AN",
+        "nombre": "Análisis Numérico",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "CDD",
+    "detalleMateria": {
+      "id": "CDD",
+      "nombre": "Ciencia de Datos",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 31,
-      "detalleMateria": {
+    "detalleRegulares": [
+      {
+        "id": "SIM",
+        "nombre": "Simulación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "PYE",
+        "nombre": "Probabilidad y Estadística",
+        "modalidad": "C"
+      },
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SG",
+    "detalleMateria": {
+      "id": "SG",
+      "nombre": "Sistemas de Gestión",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "ECO",
+        "nombre": "Economía",
+        "modalidad": "C"
+      },
+      {
+        "id": "IOP",
+        "nombre": "Investigación Operativa",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DSI",
+        "nombre": "Diseño de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "GG",
+    "detalleMateria": {
+      "id": "GG",
+      "nombre": "Gestión Gerencial",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
         "id": "AS",
-        "nombre": "Administración de Sistemas de  Información (Integradora)",
+        "nombre": "Administración de Sistemas de Información(Int)",
         "modalidad": "A"
       },
-      "detalleRegulares": [
-        {
-          "id": "Economia",
-          "nombre": "Economía",
-          "modalidad": "C"
-        },
-        {
-          "id": "DSI",
-          "nombre": "Diseño de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": true,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 32,
-      "detalleMateria": {
-        "id": "IA",
-        "nombre": "Inteligencia Artificial",
+      {
+        "id": "LEG",
+        "nombre": "Legislación",
         "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "SIM",
-          "nombre": "Simulación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AN",
-          "nombre": "Análisis Numérico",
-          "modalidad": "C"
-        },
-        {
-          "id": "PYE",
-          "nombre": "Probabilidad y Estadísticas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 33,
-      "detalleMateria": {
-        "id": "CDD",
-        "nombre": "Ciencia de Datos",
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "ECO",
+        "nombre": "Economía",
         "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "SIM",
-          "nombre": "Simulación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "BDD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        },
-        {
-          "id": "PYE",
-          "nombre": "Probabilidad y Estadísticas",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "SSI",
+    "detalleMateria": {
+      "id": "SSI",
+      "nombre": "Seguridad en los Sistemas de Información",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 34,
-      "detalleMateria": {
-        "id": "SG",
-        "nombre": "Sistemas de Gestión",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "Economia",
-          "nombre": "Economía",
-          "modalidad": "C"
-        },
-        {
-          "id": "IOP",
-          "nombre": "Investigación Operativa",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "DSI",
-          "nombre": "Diseño de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 35,
-      "detalleMateria": {
-        "id": "GG",
-        "nombre": "Gestión Gerencial",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "Legislacion",
-          "nombre": "Legislación",
-          "modalidad": "C"
-        },
-        {
-          "id": "AS",
-          "nombre": "Administración de Sistemas de  Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "Economia",
-          "nombre": "Economía",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 36,
-      "detalleMateria": {
-        "id": "SSI",
-        "nombre": "Seguridad en los Sistemas de Información",
-        "modalidad": "C"
-      },
-      "detalleRegulares": [
-        {
-          "id": "RED",
-          "nombre": "Redes de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "AS",
-          "nombre": "Administración de Sistemas de  Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "COM",
-          "nombre": "Comunicación de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "DDS",
-          "nombre": "Desarrollo de Software",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 37,
-      "detalleMateria": {
-        "id": "Proyecto",
-        "nombre": "Proyecto Final (Integradora)",
+    "detalleRegulares": [
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
         "modalidad": "A"
       },
-      "detalleRegulares": [
-        {
-          "id": "ISW",
-          "nombre": "Ingeniería y Calidad de Software",
-          "modalidad": "C"
-        },
-        {
-          "id": "RED",
-          "nombre": "Redes de Datos",
-          "modalidad": "A"
-        },
-        {
-          "id": "AS",
-          "nombre": "Administración de Sistemas de  Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "DDS",
-          "nombre": "Desarrollo de Software",
-          "modalidad": "C"
-        },
-        {
-          "id": "DSI",
-          "nombre": "Diseño de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        },
-        {
-          "id": "Ing2",
-          "nombre": "Inglés 2",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": false
-    },
-    {
-      "condicionId": 38,
-      "detalleMateria": {
-        "id": "Backend",
-        "nombre": "Backend de Aplicaciones",
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        },
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": true,
-      "estado": 0,
-      "electiva": true
+      {
+        "id": "COM",
+        "nombre": "Comunicación de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Proy.",
+    "detalleMateria": {
+      "id": "Proy.",
+      "nombre": "Proyecto Final (Int)",
+      "modalidad": "A"
     },
-    {
-      "condicionId": 39,
-      "detalleMateria": {
-        "id": "GS",
-        "nombre": "Green Software",
+    "detalleRegulares": [
+      {
+        "id": "ICS",
+        "nombre": "Ingeniería y Calidad de Software",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "BBD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        },
-        {
-          "id": "DDS",
-          "nombre": "Desarrollo de Software",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        },
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": true
-    },
-    {
-      "condicionId": 40,
-      "detalleMateria": {
-        "id": "GIP",
-        "nombre": "Gestión Industrial de la Producción",
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
+        "modalidad": "A"
+      },
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "Ing2",
+        "nombre": "Inglés II",
+        "modalidad": "A"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "BBD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "SPN",
-          "nombre": "Sistemas y Procesos de Negocio",
-          "modalidad": "C"
-        },
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": true
+      {
+        "id": "DSI",
+        "nombre": "Diseño de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": false,
+    "estado": 0
+  },
+  {
+    "condicionId": "Back",
+    "detalleMateria": {
+      "id": "Back",
+      "nombre": "Backend de Aplicaciones",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 41,
-      "detalleMateria": {
-        "id": "GMP",
-        "nombre": "Gestión de la Mejora de los Procesos",
+    "detalleRegulares": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "BBD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "SPN",
-          "nombre": "Sistemas y Procesos de Negocio",
-          "modalidad": "C"
-        },
-        {
-          "id": "ASI",
-          "nombre": "Análisis de Sistemas de Información (Integradora)",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": true
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": true,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "Green",
+    "detalleMateria": {
+      "id": "Green",
+      "nombre": "Green Software",
+      "modalidad": "C"
     },
-    {
-      "condicionId": 42,
-      "detalleMateria": {
-        "id": "DevOps",
-        "nombre": "Desarrollo y Operaciones devOPS",
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "BBD",
-          "nombre": "Bases de Datos",
-          "modalidad": "C"
-        },
-        {
-          "id": "DDS",
-          "nombre": "Desarrollo de Software",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        },
-        {
-          "id": "PPR",
-          "nombre": "Paradigmas de Programación",
-          "modalidad": "C"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": true
-    },
-    {
-      "condicionId": 43,
-      "detalleMateria": {
-        "id": "DAO",
-        "nombre": "Desarrollo de Aplicaciones Con Objetos",
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
         "modalidad": "C"
       },
-      "detalleRegulares": [
-        {
-          "id": "SSL",
-          "nombre": "Sintaxis y Semántica de los Lenguajes",
-          "modalidad": "C"
-        }
-      ],
-      "detalleAprobadas": [
-        {
-          "id": "AED",
-          "nombre": "Algoritmos y Estructuras de Datos",
-          "modalidad": "A"
-        }
-      ],
-      "detalleCambioAnio": false,
-      "estado": 0,
-      "electiva": true
-    }
-  ]
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "GI",
+    "detalleMateria": {
+      "id": "GI",
+      "nombre": "Gestión Industrial de la Producción",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SPN",
+        "nombre": "Sistemas y Proceso de Negocios",
+        "modalidad": "C"
+      },
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "GMP",
+    "detalleMateria": {
+      "id": "GMP",
+      "nombre": "Gestión de la Mejora de los Procesos",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SPN",
+        "nombre": "Sistemas y Proceso de Negocios",
+        "modalidad": "C"
+      },
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "DevOps",
+    "detalleMateria": {
+      "id": "DevOps",
+      "nombre": "Desarrollo y Operaciones devOPS",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
+        "modalidad": "C"
+      },
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "DAO",
+    "detalleMateria": {
+      "id": "DAO",
+      "nombre": "Desarrollo de Aplicaciones Con Objetos",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "AED",
+        "nombre": "Algoritmo y Estructura de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "ComMul",
+    "detalleMateria": {
+      "id": "ComMul",
+      "nombre": "Comunicación Multimedial en el Desarrollo de Sistemas de Información",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SPN",
+        "nombre": "Sistemas y Proceso de Negocios",
+        "modalidad": "C"
+      },
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "ArqS",
+    "detalleMateria": {
+      "id": "ArqS",
+      "nombre": "Arquitectura de Software",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
+        "modalidad": "C"
+      },
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": true,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "DTB",
+    "detalleMateria": {
+      "id": "DTB",
+      "nombre": "Desarrollo de Tecnología Blockchain",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "CII",
+    "detalleMateria": {
+      "id": "CII",
+      "nombre": "Creatividad e Innovación en Ingeniería",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "AudST",
+    "detalleMateria": {
+      "id": "AudST",
+      "nombre": "Auditorías de Si/Ti",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "GE",
+    "detalleMateria": {
+      "id": "GE",
+      "nombre": "Gerenciamiento Estratégico",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "CON",
+    "detalleMateria": {
+      "id": "CON",
+      "nombre": "Consultoría en Negocios Digitales",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "EMP",
+    "detalleMateria": {
+      "id": "EMP",
+      "nombre": "Emprendimientos Tecnológicos",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "AS",
+        "nombre": "Administración de Sistemas de Información(Int)",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "ASI",
+        "nombre": "Análisis de Sistemas de Información (Int)",
+        "modalidad": "A"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "DEC",
+    "detalleMateria": {
+      "id": "DEC",
+      "nombre": "Decisiones en Escenarios Complejos",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "IOP",
+        "nombre": "Investigación Operativa",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "TSO",
+    "detalleMateria": {
+      "id": "TSO",
+      "nombre": "Testing de Software",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "ICS",
+        "nombre": "Ingeniería y Calidad de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "SDS",
+    "detalleMateria": {
+      "id": "SDS",
+      "nombre": "Seguridad en el Desarrollo de Software",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
+        "modalidad": "A"
+      },
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SPN",
+        "nombre": "Sistemas y Proceso de Negocios",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "IAW",
+    "detalleMateria": {
+      "id": "IAW",
+      "nombre": "Integración de Aplicaciones en Entorno Web",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  },
+  {
+    "condicionId": "SoftAb",
+    "detalleMateria": {
+      "id": "SoftAb",
+      "nombre": "Ingeniería de Software de Fuentes Abiertas/Libres",
+      "modalidad": "C"
+    },
+    "detalleRegulares": [
+      {
+        "id": "BDD",
+        "nombre": "Base de Datos",
+        "modalidad": "C"
+      },
+      {
+        "id": "DDS",
+        "nombre": "Desarrollo de Software",
+        "modalidad": "C"
+      },
+      {
+        "id": "RDD",
+        "nombre": "Redes de Datos",
+        "modalidad": "A"
+      }
+    ],
+    "detalleAprobadas": [
+      {
+        "id": "SSL",
+        "nombre": "Sintaxis y Semántica de los Lenguajes",
+        "modalidad": "C"
+      },
+      {
+        "id": "PPR",
+        "nombre": "Paradigmas de Programación",
+        "modalidad": "C"
+      }
+    ],
+    "detalleCambioAnio": false,
+    "electiva": true,
+    "estado": 0
+  }
+]
