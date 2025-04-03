@@ -28,7 +28,7 @@ export class ElectivasComponent {
   @Output() enviarMensaje = new EventEmitter<string>()
   condiciones = CONDICIONES
   condicionesAlumnos: any = []
-  displayedColumns: string[] = ['id', 'materia', 'modalidad', 'regulares', "aprobadas", 'condicion'];
+  displayedColumns: string[] = ['id', 'materia', 'modalidad', 'regulares', "aprobadas", 'cargaHoraria', 'condicion'];
   planEstudio!: PlanEstudio
   detallesPlan: DetallePlan[] = []
 

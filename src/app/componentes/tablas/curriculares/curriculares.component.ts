@@ -30,7 +30,7 @@ export class CurricularesComponent{
   @Input() dataSource!: CondicionDTO[];
   condiciones = CONDICIONES
   condicionesAlumnos: any = []
-  displayedColumns: string[] = ['id', 'materia', 'modalidad', 'regulares', "aprobadas", 'condicion'];
+  displayedColumns: string[] = ['id', 'materia', 'modalidad', 'regulares', "aprobadas", 'cargaHoraria', 'condicion'];
   planEstudio!: PlanEstudio
   detallesPlan: DetallePlan[] = []
 
