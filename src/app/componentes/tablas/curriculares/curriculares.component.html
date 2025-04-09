@@ -5,6 +5,18 @@
               The actual rendered columns are set as a property on the row definition" -->
       
         <!-- Position Column -->
+        <ng-container matColumnDef="anio">
+          <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Año </th>
+          <ng-container *matCellDef="let element; let i = dataIndex">
+            <td *ngIf="compararAnioAnterior(i, false)"
+                mat-cell
+                class="ancho-55 columna-anio"
+                [attr.rowspan]="contarFilasDelMismoAnio(i)">
+              {{ element.anio }}
+            </td>
+          </ng-container>
+        </ng-container>
+        
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Id. </th>
           <td mat-cell *matCellDef="let element" class="ancho-55"> {{element.condicionId}} </td>
@@ -75,8 +87,8 @@
         
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row 
-          *matRowDef="let row; columns: displayedColumns;"
-          [ngClass]="{'resaltar': row.detalleCambioAnio}"
+          *matRowDef="let row; let i = dataIndex; columns: displayedColumns;"
+          [ngClass]="{'resaltar': compararAnioAnterior(i,true)}"
           [ngStyle]="obtenerEstado(row)"
           >
         </tr>

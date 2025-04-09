@@ -30,7 +30,7 @@ export class CurricularesComponent{
   @Input() dataSource!: CondicionDTO[];
   condiciones = CONDICIONES
   condicionesAlumnos: any = []
-  displayedColumns: string[] = ['id', 'materia', 'modalidad', 'regulares', "aprobadas", 'cargaHoraria', 'condicion'];
+  displayedColumns: string[] = ['anio', 'id', 'materia', 'modalidad', 'regulares', 'aprobadas', 'cargaHoraria', 'condicion'];
   planEstudio!: PlanEstudio
   detallesPlan: DetallePlan[] = []
 
@@ -39,6 +39,20 @@ export class CurricularesComponent{
   ){
 
   }
+
+  compararAnioAnterior(index: number, borde:boolean): boolean {
+    //Borde sirve para asignar clases CSS. Porque si index=0 pero se usa para asignar clases, se debe devolver false
+    if (borde && index === 0) return false;
+    if (index === 0) return true;
+    return this.dataSource[index].anio !== this.dataSource[index - 1].anio;
+  }
+
+  // Cuántas materias hay en el mismo año desde una posición
+  contarFilasDelMismoAnio(index: number): number {
+    const anioActual = this.dataSource[index].anio;
+    return this.dataSource.filter(d => d.anio === anioActual).length;
+  }
+
   setearCondiciones(res : CondicionDTO[]){
     this.dataSource = res
     this.servicioCondicion.setCondiciones(res);

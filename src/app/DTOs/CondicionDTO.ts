@@ -11,5 +11,6 @@ export interface CondicionDTO{
     detalleMateria: MateriaDTO,
     detalleCambioAnio: boolean, 
     estado: number,
-    electiva: boolean
+    electiva: boolean,
+    anio: number
 }
