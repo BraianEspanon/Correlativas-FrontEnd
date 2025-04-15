@@ -4,6 +4,7 @@
     "apellido": "Sistemas",
     "idCarrera": "K-2023",
     "nombreCarrera": "Ingeniería en Sistemas de Información",
+    "horasElectivas": 20,
     "condiciones": [
         {
             "condicionId": "AM1",

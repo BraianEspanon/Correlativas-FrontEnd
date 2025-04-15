@@ -5,12 +5,13 @@ interface MateriaDTO{
 }
 
 export interface CondicionDTO{
-    condicionId: string,
-    detalleAprobadas: MateriaDTO[],
-    detalleRegulares: MateriaDTO[], 
-    detalleMateria: MateriaDTO,
-    detalleCambioAnio: boolean, 
-    estado: number,
-    electiva: boolean,
+    condicionId: string
+    detalleAprobadas: MateriaDTO[]
+    detalleRegulares: MateriaDTO[]
+    detalleMateria: MateriaDTO
+    detalleCambioAnio: boolean
+    estado: number
+    electiva: boolean
+    cargaHoraria:number
     detalleAnio: number
 }

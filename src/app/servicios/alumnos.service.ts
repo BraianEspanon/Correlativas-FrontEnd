@@ -68,7 +68,7 @@ export class AlumnosService {
     return this.http.get<AlumnoDTOResponse>('http://localhost:8080/alumnos/condiciones/1')
     
   }
-  guardarCambiosCondiciones(condiciones : CondicionDTO[]){
+  guardarCambiosCondiciones(condiciones : AlumnoDTOResponse){
     localStorage.setItem('alumno', JSON.stringify(condiciones));
   }
 

@@ -6,10 +6,16 @@
 
 <app-tabla
     [dataSource]="datosElectivas"
-    (enviarMensaje)="buscarFilaEntreTablas($event)">
+    (enviarMensaje)="buscarFilaEntreTablas($event)"
+    (condicionCambio)="cambioCondicionElectivas()">
 </app-tabla>
     
 <p></p>
+<p class="p-bottom">Horas electivas materias no listadas en tabla: </p>
+<p></p>
+<p class="p-bottom">Horas electivas necesarias: {{horasElectivasNecesarias}}</p>
+<p class="p-bottom">Horas electivas cursadas: {{horasElectivasCursadas}}</p>
+<p class="p-bottom">Horas electivas faltantes: {{horasElectivasFaltantes}}</p>
 <div class="contenedor">
 <button class="button"
     mat-flat-button
