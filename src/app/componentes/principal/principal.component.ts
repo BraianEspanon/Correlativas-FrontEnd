@@ -8,11 +8,12 @@ import { CondicionDTO } from '../../DTOs/CondicionDTO';
 import { AlumnoDTOResponse } from '../../DTOs/AlumnoDTO';
 import { TablaComponent } from '../tablas/tabla/tabla.component';
 import { Condicion } from '../../entidades/Condicion';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [TablaComponent, MatButtonModule],
+  imports: [TablaComponent, MatButtonModule, FormsModule],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
@@ -26,6 +27,7 @@ export class PrincipalComponent implements OnInit{
   horasElectivasNecesarias!: number;
   horasElectivasCursadas!: number;
   horasElectivasFaltantes!: number;
+  horasElectivasNoListadas: number = 0;
 
   @ViewChild(TablaComponent) curricularesComponent!: TablaComponent;
 
@@ -48,6 +50,7 @@ export class PrincipalComponent implements OnInit{
         }
         this.servicioCondicion.setCondiciones(res.condiciones);
         
+        this.horasElectivasNoListadas = res.horasElectivasNoListadas
         this.obtenerHorasElecticas()
       }
     )
@@ -56,7 +59,7 @@ export class PrincipalComponent implements OnInit{
   obtenerHorasElecticas(){
     this.horasElectivasNecesarias = this.datosAlumno.horasElectivas
     this.horasElectivasCursadas = this.calcularHorasElectivas()
-    this.horasElectivasFaltantes = Math.max(0, this.horasElectivasNecesarias - this.horasElectivasCursadas);
+    this.horasElectivasFaltantes = Math.max(0, this.horasElectivasNecesarias - this.horasElectivasCursadas - this.horasElectivasNoListadas);
   }
 
   calcularHorasElectivas(){
@@ -72,12 +75,27 @@ export class PrincipalComponent implements OnInit{
   buscarFilaEntreTablas(id:string){
     this.curricularesComponent.buscarFila(id)
   }
+
   cambioCondicionElectivas(){
     this.obtenerHorasElecticas()
   }
 
+  validarMaximo() {
+    setTimeout(() => {
+      if (this.horasElectivasNoListadas > 99) {
+        this.horasElectivasNoListadas = 99;
+      }
+      if (this.horasElectivasNoListadas < 0) {
+        this.horasElectivasNoListadas = 0;
+      }
+      this.cambioCondicionElectivas()
+    
+    });
+  }
+
   guardarCambios(){
     if (confirm("¿Está seguro que desea guardar?")){
+      this.datosAlumno.horasElectivasNoListadas = this.horasElectivasNoListadas
       this.servicioAlumno.guardarCambiosCondiciones(this.datosAlumno)
       alert("Se ha guardado con éxito")
     }

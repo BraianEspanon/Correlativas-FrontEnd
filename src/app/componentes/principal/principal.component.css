@@ -11,3 +11,26 @@
 .p-bottom{
     text-align: center;
 }
+
+.input-no-listado {
+    width: 25px;
+    background-color: transparent;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid transparent; /* agrega solo el inferior */
+    border-radius: 0.5rem;
+    outline: none; /* opcional: evita el borde azul al enfocar */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
+}
+
+.input-no-listado:focus {
+    outline: 2px ridge rgba(0, 0, 0, 0.068);
+    border: 1px solid black; /* agrega solo el inferior */
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

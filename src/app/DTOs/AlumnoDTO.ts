@@ -8,6 +8,7 @@ export interface AlumnoDTOResponse{
     nombreCarrera:string
     condiciones: CondicionDTO[]
     horasElectivas: number
+    horasElectivasNoListadas: number
 }
 /*
 {

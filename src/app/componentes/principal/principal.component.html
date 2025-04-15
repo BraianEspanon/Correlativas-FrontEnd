@@ -11,7 +11,14 @@
 </app-tabla>
     
 <p></p>
-<p class="p-bottom">Horas electivas materias no listadas en tabla: </p>
+<p class="p-bottom">Horas electivas de materias no listadas: 
+    <input 
+    maxlength="2"
+    type="number" 
+    class="input-no-listado"
+    [(ngModel)]="horasElectivasNoListadas"
+    (input)="validarMaximo()">
+</p>
 <p></p>
 <p class="p-bottom">Horas electivas necesarias: {{horasElectivasNecesarias}}</p>
 <p class="p-bottom">Horas electivas cursadas: {{horasElectivasCursadas}}</p>
