@@ -82,27 +82,26 @@ export class TablaComponent {
 
   // Referencia a todas las filas
   @ViewChildren('filaRef') filas!: QueryList<ElementRef>;
-
-  // Método para buscar una fila y hacer scroll hasta ella
+  resaltadoId: string | null = null;
+  
   buscarFila(id: any) {
+    this.resaltadoId = id;
+  
     setTimeout(() => {
-    const filaEncontrada = this.filas.find(fila => 
-      fila.nativeElement.innerText.includes(id)
-    );
+      const filaEncontrada = this.filas.find(fila => 
+        fila.nativeElement.innerText.includes(id)
+      );
+  
       if (filaEncontrada) {
-       filaEncontrada.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-       // Agregar la clase para la animación
-      filaEncontrada.nativeElement.classList.add('fila-resaltada');
-
-    // Remover la clase después de 1 segundo
-    setTimeout(() => {
-      filaEncontrada.nativeElement.classList.remove('fila-resaltada');
-    }, 1000);
-
-     } else {
+        filaEncontrada.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+        // Remover la clase después de 1 segundo
+        setTimeout(() => {
+          this.resaltadoId = null;
+        }, 1000);
+      } else {
         this.enviarMensaje.emit(id);
       }
-    }, 100); // Espera 100ms para asegurarte de que las referencias estén listas
+    }, 100);
   }
-  
 }

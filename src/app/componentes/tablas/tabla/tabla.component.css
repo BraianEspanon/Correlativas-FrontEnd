@@ -85,13 +85,13 @@ select:disabled{
 }
 
 @keyframes resaltarTextoColor {
-    0% { color: black; font-weight: normal; }
-    50% { color: blue; font-weight: bold;}
-    99% { color: black; font-weight: normal;}
+    0% { color: black; font-weight: normal; filter: brightness(1); }
+    50% { color: blue; font-weight: normal; filter: brightness(0.85); }
+    100% { color: black; font-weight: normal; filter: brightness(1); }
 }
 
 .fila-resaltada {
-    animation: resaltarTextoColor 0.75s ease-in-out;
+    animation: resaltarTextoColor 1.5s ease-in-out 1 alternate
 }
 
 .columna-anio{

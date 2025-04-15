@@ -88,7 +88,9 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row 
         *matRowDef="let row; let i = dataIndex; columns: displayedColumns;"
-        [ngClass]="{'resaltar': compararAnioAnterior(i,true)}"
+        [ngClass]="{
+          'resaltar': compararAnioAnterior(i,true),
+          'fila-resaltada': row.condicionId === resaltadoId}"
         [ngStyle]="obtenerEstado(row)"
         >
       </tr>
