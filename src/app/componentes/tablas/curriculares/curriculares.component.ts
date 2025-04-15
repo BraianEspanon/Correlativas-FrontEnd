@@ -44,13 +44,13 @@ export class CurricularesComponent{
     //Borde sirve para asignar clases CSS. Porque si index=0 pero se usa para asignar clases, se debe devolver false
     if (borde && index === 0) return false;
     if (index === 0) return true;
-    return this.dataSource[index].anio !== this.dataSource[index - 1].anio;
+    return this.dataSource[index].detalleAnio !== this.dataSource[index - 1].detalleAnio;
   }
 
   // Cuántas materias hay en el mismo año desde una posición
   contarFilasDelMismoAnio(index: number): number {
-    const anioActual = this.dataSource[index].anio;
-    return this.dataSource.filter(d => d.anio === anioActual).length;
+    const anioActual = this.dataSource[index].detalleAnio;
+    return this.dataSource.filter(d => d.detalleAnio === anioActual).length;
   }
 
   setearCondiciones(res : CondicionDTO[]){

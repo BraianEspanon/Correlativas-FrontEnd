@@ -5,6 +5,7 @@ import { PlanEstudio } from '../entidades/PlanEstudio';
 import { CondicionDTO } from '../DTOs/CondicionDTO';
 import { CondicionService } from './condicion.service';
 import { Observable, of, tap } from 'rxjs';
+import { AlumnoDTOResponse } from '../DTOs/AlumnoDTO';
 
 class AlumnoDTO{
   public legajo: number;
@@ -44,19 +45,19 @@ export class AlumnosService {
   }
 
   getCondicionesAlumno(legajo: number){
-    const condicionesLocal = localStorage.getItem('condiciones');
+    const condicionesLocal = localStorage.getItem('alumno');
 
     if (condicionesLocal) {
       // Si los datos existen en Local Storage, devolverlos como Observable
-      const condiciones: CondicionDTO[] = JSON.parse(condicionesLocal) as CondicionDTO[];
+      const condiciones: AlumnoDTOResponse = JSON.parse(condicionesLocal) as AlumnoDTOResponse;
       console.log(condiciones)
       return of(condiciones); // `of` crea un Observable a partir de los datos existentes
     } else {
       // Si no están en Local Storage, hacer la solicitud HTTP
       return this.leerJson().pipe(
-        tap((res: CondicionDTO[]) => {
+        tap((res: AlumnoDTOResponse) => {
           // Guardar en Local Storage y en el servicio una vez que llegan los datos
-          localStorage.setItem('condiciones', JSON.stringify(res));
+          localStorage.setItem('alumno', JSON.stringify(res));
           console.log(res)
         })
       );
@@ -64,24 +65,24 @@ export class AlumnosService {
   }
 
   getCondicionesAlumnoHTTP(){
-    return this.http.get<CondicionDTO[]>('http://localhost:8080/alumnos/condiciones/1')
+    return this.http.get<AlumnoDTOResponse>('http://localhost:8080/alumnos/condiciones/1')
     
   }
   guardarCambiosCondiciones(condiciones : CondicionDTO[]){
-    localStorage.setItem('condiciones', JSON.stringify(condiciones));
+    localStorage.setItem('alumno', JSON.stringify(condiciones));
   }
 
   reiniciarPlan(){
     return this.leerJson().pipe(
-      tap((res: CondicionDTO[]) => {
+      tap((res: AlumnoDTOResponse) => {
         // Guardar en Local Storage y en el servicio una vez que llegan los datos
-        localStorage.setItem('condiciones', JSON.stringify(res));
+        localStorage.setItem('alumno', JSON.stringify(res));
         console.log(res)
       })
     )
   }
 
   leerJson(){
-    return this.http.get<CondicionDTO[]>('/assets/k-2023.json')
+    return this.http.get<AlumnoDTOResponse>('/assets/k-2023.json')
   }
 }

@@ -77,7 +77,7 @@ export class TablaComponent {
 
 
   clickDetalle(regulares:any){
-    this.buscarFila(regulares.nombre)
+    this.buscarFila(regulares.id)
   }
 
   // Referencia a todas las filas

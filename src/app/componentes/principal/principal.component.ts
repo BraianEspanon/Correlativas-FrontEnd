@@ -5,11 +5,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { CondicionService } from '../../servicios/condicion.service';
 import { AlumnosService } from '../../servicios/alumnos.service';
 import { CondicionDTO } from '../../DTOs/CondicionDTO';
+import { AlumnoDTOResponse } from '../../DTOs/AlumnoDTO';
+import { TablaComponent } from '../tablas/tabla/tabla.component';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [ElectivasComponent, CurricularesComponent, MatButtonModule],
+  imports: [TablaComponent, MatButtonModule],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
@@ -17,7 +19,7 @@ export class PrincipalComponent implements OnInit{
   datosCurriculares: CondicionDTO[] = [];
   datosElectivas: CondicionDTO[] = [];
   datosCompletos: CondicionDTO[] = [];
-  @ViewChild(CurricularesComponent) curricularesComponent!: CurricularesComponent;
+  @ViewChild(TablaComponent) curricularesComponent!: TablaComponent;
 
   constructor(private servicioAlumno: AlumnosService,
       private servicioCondicion: CondicionService){
@@ -25,9 +27,9 @@ export class PrincipalComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.servicioAlumno.getCondicionesAlumno(1).subscribe((res : CondicionDTO[])=>{
-      this.datosCompletos = res
-        for (var condicion of res){
+    this.servicioAlumno.getCondicionesAlumno(1).subscribe((res : AlumnoDTOResponse)=>{
+      this.datosCompletos = res.condiciones
+        for (var condicion of res.condiciones){
           if (condicion.electiva){
             this.datosElectivas.push(condicion)
           }
@@ -35,11 +37,11 @@ export class PrincipalComponent implements OnInit{
             this.datosCurriculares.push(condicion)
           }
         }
-        this.servicioCondicion.setCondiciones(res);
+        this.servicioCondicion.setCondiciones(res.condiciones);
       })
   }
 
-  recibirMensaje(id:string){
+  buscarFilaEntreTablas(id:string){
     //console.log("Desde electivas se recibió: " + id)
     this.curricularesComponent.buscarFila(id)
   }
@@ -54,9 +56,10 @@ export class PrincipalComponent implements OnInit{
     reiniciarPlan(){
       if (confirm("¿Está seguro que desea reiniciar las condiciones del plan?")){
   
-        this.servicioAlumno.reiniciarPlan().subscribe((res : CondicionDTO[])=>{
-          this.datosCompletos = res
-          this.servicioCondicion.setCondiciones(res);
+        this.servicioAlumno.reiniciarPlan().subscribe((res : AlumnoDTOResponse)=>{
+          
+          this.datosCompletos = res.condiciones
+          this.servicioCondicion.setCondiciones(res.condiciones);
         })
       
         alert("Se reinició el plan correctamente")

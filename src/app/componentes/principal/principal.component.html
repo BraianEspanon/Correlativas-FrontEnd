@@ -1,14 +1,13 @@
 <h1>principal works!</h1>
 
-<app-curriculares
+<app-tabla
     [dataSource]="datosCurriculares">
-</app-curriculares>
+</app-tabla>
 
-<app-electivas
+<app-tabla
     [dataSource]="datosElectivas"
-    (enviarMensaje)="recibirMensaje($event)"
-    >
-</app-electivas>
+    (enviarMensaje)="buscarFilaEntreTablas($event)">
+</app-tabla>
     
 <p></p>
 <div class="contenedor">

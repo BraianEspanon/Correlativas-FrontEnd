@@ -12,5 +12,5 @@ export interface CondicionDTO{
     detalleCambioAnio: boolean, 
     estado: number,
     electiva: boolean,
-    anio: number
+    detalleAnio: number
 }

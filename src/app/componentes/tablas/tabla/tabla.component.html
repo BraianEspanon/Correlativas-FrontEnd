@@ -19,13 +19,13 @@
       
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef class="header ancho-60"> Id. </th>
-        <td mat-cell *matCellDef="let element" class="ancho-60"> {{element.condicionId}} </td>
+        <td mat-cell *matCellDef="let element" #filaRef class="ancho-60"> {{element.condicionId}} </td>
       </ng-container>
     
       <!-- Name Column -->
       <ng-container matColumnDef="materia">
         <th mat-header-cell *matHeaderCellDef class="header ancho-200"> Materia </th>
-        <td mat-cell *matCellDef="let element" #filaRef class="ancho-200"> {{element.detalleMateria.nombre}} </td>
+        <td mat-cell *matCellDef="let element" class="ancho-200"> {{element.detalleMateria.nombre}} </td>
       </ng-container>
     
       <!-- Weight Column -->
