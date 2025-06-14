@@ -1,8 +1,12 @@
-<h1>principal works!</h1>
+
+<h2 class="titulo">Plan de estudio</h2>
+<h1 class="titulo">{{titulo}}</h1>
 
 <app-tabla
     [dataSource]="datosCurriculares">
 </app-tabla>
+
+<h2 class="titulo">Electivas</h2>
 
 <app-tabla
     [dataSource]="datosElectivas"
@@ -10,31 +14,35 @@
     (condicionCambio)="cambioCondicionElectivas()">
 </app-tabla>
     
-<p></p>
-<p class="p-bottom">Horas electivas de materias no listadas: 
-    <input 
-    maxlength="2"
-    type="number" 
-    class="input-no-listado"
-    [(ngModel)]="horasElectivasNoListadas"
-    (input)="validarMaximo()">
-</p>
-<p></p>
-<p class="p-bottom">Horas electivas necesarias: {{horasElectivasNecesarias}}</p>
-<p class="p-bottom">Horas electivas cursadas: {{horasElectivasCursadas}}</p>
-<p class="p-bottom">Horas electivas faltantes: {{horasElectivasFaltantes}}</p>
-<div class="contenedor">
-<button class="button"
-    mat-flat-button
-    color="primary"
-    (click)="reiniciarPlan()">
-    Reiniciar plan
-</button>
+<div class="footer">
+    <p></p>
+    <p class="p-bottom">Horas electivas de materias no listadas: 
+        <input 
+        maxlength="2"
+        type="number" 
+        class="input-no-listado"
+        [(ngModel)]="horasElectivasNoListadas"
+        (input)="validarMaximo()"
+        (keydown)="evitarDecimal($event)"
+        placeholder="0">
+    </p>
+    <p></p>
+    <p class="p-bottom">Horas electivas necesarias: {{horasElectivasNecesarias}}</p>
+    <p class="p-bottom">Horas electivas cursadas: {{horasElectivasCursadas}}</p>
+    <p class="p-bottom" style="font-weight:450;">Horas electivas faltantes: {{horasElectivasFaltantes}}</p>
+    <div class="contenedor">
+    <button class="button"
+        mat-flat-button
+        color="primary"
+        (click)="reiniciarPlan()">
+        Reiniciar plan
+    </button>
 
-<button class="button"
-    mat-flat-button
-    color="primary"
-    (click)="guardarCambios()">
-    Guardar cambios
-</button>
+    <button class="button"
+        mat-flat-button
+        color="primary"
+        (click)="guardarCambios()">
+        Guardar cambios
+    </button>
+    </div>
 </div>

@@ -1,4 +1,7 @@
-
+.titulo{
+    text-align: center;
+    margin: 10px;
+}
 .button{
     margin: 0px 5px;
 }
@@ -18,14 +21,14 @@
     text-align: center;
     padding: 2px;
     border: 1px solid transparent; /* agrega solo el inferior */
-    border-radius: 0.5rem;
+    border-bottom: 1px solid #dddddd;
     outline: none; /* opcional: evita el borde azul al enfocar */
     box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
 }
 
 .input-no-listado:focus {
     outline: 2px ridge rgba(0, 0, 0, 0.068);
-    border: 1px solid black; /* agrega solo el inferior */
+    border-radius: 0.5rem;
 }
 
 
@@ -33,4 +36,12 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.header{
+    min-width: 350px;
+    margin: auto;
+}
+.footer{
+    min-width: 350px;
 }

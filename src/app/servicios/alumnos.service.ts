@@ -59,6 +59,7 @@ export class AlumnosService {
           // Guardar en Local Storage y en el servicio una vez que llegan los datos
           localStorage.setItem('alumno', JSON.stringify(res));
           console.log(res)
+          location.reload()
         })
       );
     }

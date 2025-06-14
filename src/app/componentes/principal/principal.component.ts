@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent implements OnInit{
+  titulo: string = "..."
   datosCurriculares: CondicionDTO[] = [];
   datosElectivas: CondicionDTO[] = [];
   datosCondiciones: CondicionDTO[] = [];
@@ -35,11 +36,14 @@ export class PrincipalComponent implements OnInit{
       private servicioCondicion: CondicionService){
 
   }
-
+  datosCargados = false;
   ngOnInit(): void {
     this.servicioAlumno.getCondicionesAlumno(1).subscribe((res : AlumnoDTOResponse)=>{
-      this.datosAlumno = res
-      this.datosCondiciones = res.condiciones
+      
+        this.datosAlumno = res
+        console.log(this.datosAlumno)
+        this.titulo = res.nombreCarrera
+        this.datosCondiciones = res.condiciones
         for (var condicion of res.condiciones){
           if (condicion.electiva){
             this.datosElectivas.push(condicion)
@@ -52,6 +56,8 @@ export class PrincipalComponent implements OnInit{
         
         this.horasElectivasNoListadas = res.horasElectivasNoListadas
         this.obtenerHorasElecticas()
+      
+        this.datosCargados = true; // 🔥 Ahora sí están los datos
       }
     )
   }
@@ -82,16 +88,24 @@ export class PrincipalComponent implements OnInit{
 
   validarMaximo() {
     setTimeout(() => {
-      if (this.horasElectivasNoListadas > 99) {
-        this.horasElectivasNoListadas = 99;
+      if (this.horasElectivasNoListadas != null) {
+        let valorStr = this.horasElectivasNoListadas.toString();
+  
+        if (valorStr.length > 2) {
+          valorStr = valorStr.slice(0, 2);
+          this.horasElectivasNoListadas = parseInt(valorStr, 10);
+        }
       }
-      if (this.horasElectivasNoListadas < 0) {
-        this.horasElectivasNoListadas = 0;
-      }
-      this.cambioCondicionElectivas()
-    
+      this.cambioCondicionElectivas();
     });
   }
+  
+  evitarDecimal(event: KeyboardEvent): void {
+    if (event.key === '.' || event.key === ',' || event.key === 'e' || event.key === '-' || event.key === '+') {
+      event.preventDefault();
+    }
+  }
+  
 
   guardarCambios(){
     if (confirm("¿Está seguro que desea guardar?")){
@@ -114,5 +128,5 @@ export class PrincipalComponent implements OnInit{
       location.reload()
     }
   }
-  
+
 }

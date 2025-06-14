@@ -3,21 +3,20 @@
 mat-table {
     width: 100%;
     display: table;
-    table-layout: fixed; 
+    table-layout: auto; 
 }
 
-.ancho-50 {width: 50px;}
-.ancho-60 {width: 60px;}
-.ancho-70 {width: 70px;}
-.ancho-75 {width: 75px;}
-.ancho-105 {width: 105px;}
+.ancho-15 {width: 15px;}
+.ancho-30 {width: 30px;}
+.ancho-40 {width: 40px;}
+.ancho-55 {width: clamp(40px, 10vw, 100px);}
 
 td, th {
     text-align: center !important;
     vertical-align: middle !important;
     border-right: 1px inset rgb(40, 40, 40);
-    font-size: small;
-    padding: 0px 3px;
+    font-size: clamp(5px, 2.25vw, 12px);
+    padding: 0px 1px;
 }
 
 tr {
@@ -51,17 +50,18 @@ select:disabled{
     border-bottom: 5px solid rgb(40, 40, 40);
 }
 
-.container{
-    place-items: center;
-    width: 80%;
-    min-width: 700px;
-    margin: 15px auto;
-    padding: 15px;
+.container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .tabla{
     border: 5px solid rgb(40, 40, 40);
     border-radius: 0.3rem;
+    box-sizing: border-box; /* 👈 clave para que el borde no expanda el ancho */
 }
 
 .header{
