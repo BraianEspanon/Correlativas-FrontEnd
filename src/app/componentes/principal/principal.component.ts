@@ -1,12 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ElectivasComponent } from '../tablas/electivas/electivas.component';
-import { CurricularesComponent } from '../tablas/curriculares/curriculares.component';
 import {MatButtonModule} from '@angular/material/button';
 import { CondicionService } from '../../servicios/condicion.service';
 import { AlumnosService } from '../../servicios/alumnos.service';
 import { CondicionDTO } from '../../DTOs/CondicionDTO';
 import { AlumnoDTOResponse } from '../../DTOs/AlumnoDTO';
-import { TablaComponent } from '../tablas/tabla/tabla.component';
+import { TablaComponent } from '../tabla/tabla.component';
 import { Condicion } from '../../entidades/Condicion';
 import { FormsModule } from '@angular/forms';
 

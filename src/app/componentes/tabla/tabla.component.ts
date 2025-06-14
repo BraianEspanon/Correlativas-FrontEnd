@@ -1,18 +1,18 @@
 import { Component, OnInit, QueryList, ViewChildren, ElementRef, Input, Output, EventEmitter } from '@angular/core';
-import { Materia } from '../../../entidades/Materia';
+import { Materia } from '../../entidades/Materia';
 import { CommonModule } from '@angular/common';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
-import {MateriasService} from '../../../servicios/materias.service'
+import {MateriasService} from '../../servicios/materias.service'
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltip} from '@angular/material/tooltip';
-import { PlanEstudioService } from '../../../servicios/plan-estudio.service';
-import { PlanEstudio } from '../../../entidades/PlanEstudio';
-import { DetallePlan } from '../../../entidades/DetallePlan';
-import { AlumnosService } from '../../../servicios/alumnos.service';
-import { CondicionDTO } from '../../../DTOs/CondicionDTO';
-import { CondicionService } from '../../../servicios/condicion.service';
+import { PlanEstudioService } from '../../servicios/plan-estudio.service';
+import { PlanEstudio } from '../../entidades/PlanEstudio';
+import { DetallePlan } from '../../entidades/DetallePlan';
+import { AlumnosService } from '../../servicios/alumnos.service';
+import { CondicionDTO } from '../../DTOs/CondicionDTO';
+import { CondicionService } from '../../servicios/condicion.service';
 
 const CONDICIONES = [
   {id :0, estado:"Libre"}, 
