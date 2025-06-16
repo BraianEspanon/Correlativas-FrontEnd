@@ -9,6 +9,7 @@ mat-table {
 .ancho-15 {width: 15px;}
 .ancho-30 {width: 30px;}
 .ancho-40 {width: 40px;}
+.ancho-50 {width: 50px}
 .ancho-55 {width: clamp(40px, 10vw, 100px);}
 
 td, th {

@@ -5,7 +5,11 @@ import { AbmPlanComponent } from './componentes/abm/abm-plan/abm-plan.component'
 import { AbmAlumnoComponent } from './componentes/abm/abm-alumno/abm-alumno.component';
 
 export const routes: Routes = [
+    /*
     {path: 'ABM/Materia', component: AbmMateriaComponent},
     {path: 'ABM/Plan', component: AbmPlanComponent},
     {path: 'ABM/Alumno', component: AbmAlumnoComponent},
-    {path: '', component: PrincipalComponent}];
+    */
+    {path: '', component: PrincipalComponent},
+    { path: '**', redirectTo: '', pathMatch: 'full' }
+];

@@ -63,7 +63,7 @@ export class PrincipalComponent implements OnInit{
   obtenerHorasElecticas(){
     this.horasElectivasNecesarias = this.datosAlumno.horasElectivas
     this.horasElectivasCursadas = this.calcularHorasElectivas()
-    this.horasElectivasFaltantes = Math.max(0, this.horasElectivasNecesarias - this.horasElectivasCursadas - this.horasElectivasNoListadas);
+    this.horasElectivasFaltantes = Math.max(0, this.horasElectivasNecesarias - this.horasElectivasCursadas);
   }
 
   calcularHorasElectivas(){
@@ -73,7 +73,7 @@ export class PrincipalComponent implements OnInit{
         acum += cond.cargaHoraria
       }
     }
-    return acum
+    return acum + this.horasElectivasNoListadas
   }
 
   buscarFilaEntreTablas(id:string){
