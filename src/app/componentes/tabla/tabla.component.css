@@ -53,16 +53,17 @@ select:disabled{
 
 .container {
   width: 100%;
+  max-width: 1080px;
   overflow-x: auto;
   margin: 0 auto;
-  padding: 5px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .tabla{
     border: 5px solid rgb(40, 40, 40);
     border-radius: 0.3rem;
-    box-sizing: border-box; /* 👈 clave para que el borde no expanda el ancho */
+    box-sizing: border-box; /*clave para que el borde no expanda el ancho */
 }
 
 .header{
