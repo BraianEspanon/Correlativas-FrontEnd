@@ -16,11 +16,10 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-notificacion',
-  standalone: true,
-  imports: [MatButtonModule, MatDialogClose, MatDialogTitle],
-  templateUrl: './notificacion.component.html',
-  styleUrl: './notificacion.component.css'
+    selector: 'app-notificacion',
+    imports: [MatButtonModule, MatDialogClose, MatDialogTitle],
+    templateUrl: './notificacion.component.html',
+    styleUrl: './notificacion.component.css'
 })
 export class NotificacionComponent implements OnInit{
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);

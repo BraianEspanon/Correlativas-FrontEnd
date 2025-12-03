@@ -29,11 +29,10 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-listado-detalles',
-  standalone: true,
-  imports: [FormsModule, MatDialogTitle, MatCheckboxModule, MatTableModule, MatDialogContent, MatDialogActions, MatButtonModule, MatIconModule, MatDialogClose],
-  templateUrl: './listado-detalles.component.html',
-  styleUrl: './listado-detalles.component.css'
+    selector: 'app-listado-detalles',
+    imports: [FormsModule, MatDialogTitle, MatCheckboxModule, MatTableModule, MatDialogContent, MatDialogActions, MatButtonModule, MatIconModule, MatDialogClose],
+    templateUrl: './listado-detalles.component.html',
+    styleUrl: './listado-detalles.component.css'
 })
 
 export class ListadoDetallesComponent implements OnInit {

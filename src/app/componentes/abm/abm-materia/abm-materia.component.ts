@@ -18,11 +18,10 @@ import { MateriasService } from '../../../servicios/materias.service';
 import { NotificacionComponent } from '../notificacion/notificacion.component';
 
 @Component({
-  selector: 'app-abm-materia',
-  standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule],
-  templateUrl: './abm-materia.component.html',
-  styleUrl: './abm-materia.component.css'
+    selector: 'app-abm-materia',
+    imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule],
+    templateUrl: './abm-materia.component.html',
+    styleUrl: './abm-materia.component.css'
 })
 export class AbmMateriaComponent implements OnInit{
   readonly dialog = inject(MatDialog);
