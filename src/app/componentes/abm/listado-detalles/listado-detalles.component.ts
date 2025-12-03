@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
 import {DataSource} from '@angular/cdk/collections';
-import { CommonModule } from '@angular/common';
+
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';

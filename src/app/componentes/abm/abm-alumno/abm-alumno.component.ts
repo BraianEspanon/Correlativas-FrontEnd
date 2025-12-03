@@ -7,17 +7,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlumnosService } from '../../../servicios/alumnos.service';
 import { PlanEstudioService } from '../../../servicios/plan-estudio.service';
 import { PlanEstudio } from '../../../entidades/PlanEstudio';
-import { CommonModule } from '@angular/common';
+
 import { MatSelectModule } from '@angular/material/select';
 
 @Component({
     selector: 'app-abm-alumno',
-    imports: [CommonModule,
-        FormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatSelectModule],
+    imports: [FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule],
     templateUrl: './abm-alumno.component.html',
     styleUrl: './abm-alumno.component.css'
 })
