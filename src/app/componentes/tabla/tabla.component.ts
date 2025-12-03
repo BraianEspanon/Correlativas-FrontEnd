@@ -29,6 +29,7 @@ const CONDICIONES = [
 })
 export class TablaComponent {
   @Input() dataSource!: CondicionDTO[];
+  @Input() libreCorrelatividades!: boolean;
   condiciones = CONDICIONES
   condicionesAlumnos: any = []
   displayedColumns: string[] = ['anio', 'id', 'materia', 'modalidad', 'regulares', 'aprobadas', 'cargaHoraria', 'condicion'];
@@ -69,10 +70,10 @@ export class TablaComponent {
 
   }
   obtenerEstado(row : CondicionDTO){
-    return this.servicioCondicion.getMateriaColor(row)
+    return this.servicioCondicion.getMateriaColor(row, this.libreCorrelatividades)
   }
   noPuedeCursar(materia : CondicionDTO){
-    return !this.servicioCondicion.puedeCursar(materia)
+    return !this.servicioCondicion.puedeCursar(materia, this.libreCorrelatividades)
   }
 
 

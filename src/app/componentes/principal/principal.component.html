@@ -3,18 +3,23 @@
 <h1 class="titulo">{{titulo}}</h1>
 
 <app-tabla
-    [dataSource]="datosCurriculares">
+    [dataSource]="datosCurriculares"
+    [libreCorrelatividades]="libreCorrelatividades">
 </app-tabla>
 
 <h2 class="titulo">Electivas</h2>
 
 <app-tabla
     [dataSource]="datosElectivas"
+    [libreCorrelatividades]="libreCorrelatividades"
     (enviarMensaje)="buscarFilaEntreTablas($event)"
     (condicionCambio)="cambioCondicionElectivas()">
 </app-tabla>
     
 <div class="footer">
+    <div class="contenedor">
+        <mat-checkbox [(ngModel)]="libreCorrelatividades">Desbloquear todas las materias</mat-checkbox>
+    </div>
     <p></p>
     <p class="p-bottom">Horas electivas de materias no listadas: 
         <input 

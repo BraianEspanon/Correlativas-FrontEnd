@@ -23,10 +23,10 @@ export class CondicionService {
     this.condiciones[cond.condicionId] = cond
   }
 
-  getMateriaColor(materia: CondicionDTO){
+  getMateriaColor(materia: CondicionDTO, libreCorrelatividades:boolean){
     let condicion = materia.estado
     if (condicion === 0){
-      if (this.puedeCursar(materia)){
+      if (this.puedeCursar(materia, libreCorrelatividades)){
         return {'background-color':'lightgoldenrodyellow'}
       }
       else{
@@ -44,7 +44,10 @@ export class CondicionService {
     }
   }
     
-  puedeCursar(materia:CondicionDTO){
+  puedeCursar(materia:CondicionDTO, libreCorrelatividades:boolean){
+    if (libreCorrelatividades){
+      return true
+    }
     let regulares = materia.detalleRegulares
     let aprobadas = materia.detalleAprobadas
 

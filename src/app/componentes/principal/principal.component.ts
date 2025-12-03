@@ -7,11 +7,12 @@ import { AlumnoDTOResponse } from '../../DTOs/AlumnoDTO';
 import { TablaComponent } from '../tabla/tabla.component';
 import { Condicion } from '../../entidades/Condicion';
 import { FormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [TablaComponent, MatButtonModule, FormsModule],
+  imports: [TablaComponent, MatButtonModule, FormsModule, MatCheckboxModule],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
@@ -28,6 +29,7 @@ export class PrincipalComponent implements OnInit{
   horasElectivasFaltantes!: number;
   horasElectivasNoListadas: number = 0;
 
+  libreCorrelatividades:boolean = false;
   @ViewChild(TablaComponent) curricularesComponent!: TablaComponent;
 
   constructor(private servicioAlumno: AlumnosService,
