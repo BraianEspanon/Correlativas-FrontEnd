@@ -1,35 +1,37 @@
 <div class="container">
-    <mat-label class="titulo">ABM Alumno</mat-label>
-    <p>
-        <mat-form-field>
-          <mat-label>Legajo</mat-label>
-          <input type="number" matInput [(ngModel)]="legajo"/>
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-          <mat-label>Nombre</mat-label>
-          <input matInput [(ngModel)]="nombre"/>
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-          <mat-label>Apellido</mat-label>
-          <input matInput [(ngModel)]="apellido"/>
-        </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field>
-        <mat-label>Carrera</mat-label>
-        <mat-select [(ngModel)]="planSeleccionado">
-          <mat-option *ngFor="let plan of planesEstudio" 
-          [value]="plan">
+  <mat-label class="titulo">ABM Alumno</mat-label>
+  <p>
+    <mat-form-field>
+      <mat-label>Legajo</mat-label>
+      <input type="number" matInput [(ngModel)]="legajo"/>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="nombre"/>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Apellido</mat-label>
+      <input matInput [(ngModel)]="apellido"/>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Carrera</mat-label>
+      <mat-select [(ngModel)]="planSeleccionado">
+        @for (plan of planesEstudio; track plan) {
+          <mat-option
+            [value]="plan">
             {{plan.getNombre()}}
           </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </p>
-    <p>
-        <button mat-raised-button class="button" (click)="crearAlumno()">Confirmar</button>
-    </p>
+        }
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+    <button mat-raised-button class="button" (click)="crearAlumno()">Confirmar</button>
+  </p>
 </div>

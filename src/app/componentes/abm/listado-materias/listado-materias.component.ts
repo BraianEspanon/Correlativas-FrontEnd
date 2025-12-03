@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
@@ -23,12 +23,10 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-listado-materias',
-  standalone: true,
-  imports: [CommonModule, MatTableModule, MatCheckboxModule, FormsModule, MatButtonModule, 
-    MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle],
-  templateUrl: './listado-materias.component.html',
-  styleUrl: './listado-materias.component.css'
+    selector: 'app-listado-materias',
+    imports: [MatTableModule, MatCheckboxModule, FormsModule, MatButtonModule, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle],
+    templateUrl: './listado-materias.component.html',
+    styleUrl: './listado-materias.component.css'
 })
 export class ListadoMateriasComponent implements OnInit {
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);

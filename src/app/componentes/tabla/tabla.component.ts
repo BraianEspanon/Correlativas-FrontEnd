@@ -21,11 +21,10 @@ const CONDICIONES = [
 
 
 @Component({
-  selector: 'app-tabla',
-  standalone: true,
-  imports: [CommonModule, MatTableModule, MatSelectModule, MatButtonModule, MatTooltip],
-  templateUrl: './tabla.component.html',
-  styleUrl: './tabla.component.css'
+    selector: 'app-tabla',
+    imports: [CommonModule, MatTableModule, MatSelectModule, MatButtonModule, MatTooltip],
+    templateUrl: './tabla.component.html',
+    styleUrl: './tabla.component.css'
 })
 export class TablaComponent {
   @Input() dataSource!: CondicionDTO[];

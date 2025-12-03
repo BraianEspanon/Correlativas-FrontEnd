@@ -23,11 +23,10 @@ import { PlanEstudio } from '../../../entidades/PlanEstudio';
 import { PlanEstudioService } from '../../../servicios/plan-estudio.service';
 
 @Component({
-  selector: 'app-abm-plan',
-  standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule],
-  templateUrl: './abm-plan.component.html',
-  styleUrl: './abm-plan.component.css'
+    selector: 'app-abm-plan',
+    imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule],
+    templateUrl: './abm-plan.component.html',
+    styleUrl: './abm-plan.component.css'
 })
 export class AbmPlanComponent {
   readonly dialog = inject(MatDialog);

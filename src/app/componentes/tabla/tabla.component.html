@@ -1,99 +1,114 @@
 <div class="container" >
   <mat-table multiTemplateDataRows #table [dataSource]="dataSource" class="mat-elevation-z3 tabla">
 
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-    
-      <!-- Position Column -->
-      <ng-container matColumnDef="anio">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-15"> Año </th>
-        <ng-container *matCellDef="let element; let i = dataIndex">
-          <td *ngIf="compararAnioAnterior(i, false)"
-              mat-cell
-              class="ancho-15 columna-anio"
-              [attr.rowspan]="contarFilasDelMismoAnio(i)">
+    <!--- Note that these columns can be defined in any order.
+    The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="anio">
+      <th mat-header-cell *matHeaderCellDef class="header ancho-15"> Año </th>
+      <ng-container *matCellDef="let element; let i = dataIndex">
+        @if (compararAnioAnterior(i, false)) {
+          <td
+            mat-cell
+            class="ancho-15 columna-anio"
+            [attr.rowspan]="contarFilasDelMismoAnio(i)">
             {{ element.detalleAnio }}
           </td>
-        </ng-container>
+        }
       </ng-container>
-      
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-50"> Id. </th>
-        <td mat-cell *matCellDef="let element" #filaRef class="ancho-50"> {{element.condicionId}} </td>
-      </ng-container>
-    
-      <!-- Name Column -->
-      <ng-container matColumnDef="materia">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-90"> Materia </th>
-        <td mat-cell *matCellDef="let element" class="ancho-90"> {{element.detalleMateria.nombre}} </td>
-      </ng-container>
-    
-      <!-- Weight Column -->
-      <ng-container matColumnDef="modalidad">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-40"> Mod. </th>
-        <td mat-cell *matCellDef="let element" class="ancho-40"> {{element.detalleMateria.modalidad}} </td>
-      </ng-container>
-    
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="regulares">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Regulares </th>
-        <td mat-cell *matCellDef="let element" class="ancho-55">
-          <div *ngFor="let regulares of element.detalleRegulares; let last = last" 
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="header ancho-50"> Id. </th>
+      <td mat-cell *matCellDef="let element" #filaRef class="ancho-50"> {{element.condicionId}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="materia">
+      <th mat-header-cell *matHeaderCellDef class="header ancho-90"> Materia </th>
+      <td mat-cell *matCellDef="let element" class="ancho-90"> {{element.detalleMateria.nombre}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="modalidad">
+      <th mat-header-cell *matHeaderCellDef class="header ancho-40"> Mod. </th>
+      <td mat-cell *matCellDef="let element" class="ancho-40"> {{element.detalleMateria.modalidad}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="regulares">
+      <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Regulares </th>
+      <td mat-cell *matCellDef="let element" class="ancho-55">
+        @for (regulares of element.detalleRegulares; track regulares; let last = $last) {
+          <div
+            class="celdaListada"
+            matTooltip="{{regulares.nombre}}"
+            (click)="clickDetalle(regulares)">
+            {{regulares.id}}@if (!last) {
+            <span> -</span>
+          }
+        </div>
+      }
+      @if (element.detalleRegulares?.length === 0) {
+        <div>-</div>
+      }
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="aprobadas">
+    <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Aprobadas </th>
+    <td mat-cell *matCellDef="let element" class="ancho-55">
+      @for (regulares of element.detalleAprobadas; track regulares; let last = $last) {
+        <div
           class="celdaListada"
           matTooltip="{{regulares.nombre}}"
           (click)="clickDetalle(regulares)">
-            {{regulares.id}}<span *ngIf="!last"> -</span>
-          </div>
-          <div *ngIf="element.detalleRegulares?.length === 0">-</div>
-        </td>
-      </ng-container>
+          {{regulares.id}}@if (!last) {
+          <span> -</span>
+        }
+      </div>
+    }
+    @if (element.detalleAprobadas?.length === 0) {
+      <div>-</div>
+    }
+  </td>
+</ng-container>
 
-      <ng-container matColumnDef="aprobadas">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Aprobadas </th>
-        <td mat-cell *matCellDef="let element" class="ancho-55"> 
-          <div *ngFor="let regulares of element.detalleAprobadas; let last = last" 
-          class="celdaListada"
-          matTooltip="{{regulares.nombre}}"
-          (click)="clickDetalle(regulares)">
-            {{regulares.id}}<span *ngIf="!last"> -</span>
-          </div>
-          <div *ngIf="element.detalleAprobadas?.length === 0">-</div>
-        </td>
-      </ng-container>
+<!-- Weight Column -->
+<ng-container matColumnDef="cargaHoraria">
+  <th mat-header-cell *matHeaderCellDef class="header ancho-30"> Carga Horaria </th>
+  <td mat-cell *matCellDef="let element" class="ancho-30"> {{element.cargaHoraria}} </td>
+</ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="cargaHoraria">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-30"> Carga Horaria </th>
-        <td mat-cell *matCellDef="let element" class="ancho-30"> {{element.cargaHoraria}} </td>
-      </ng-container>
-      
-      <ng-container matColumnDef="condicion">
-        <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Condicion </th>
-        <td mat-cell *matCellDef="let element" class="ancho-55"> 
-          <select
-          (change)="onChange($event.target, element)"
-          [disabled]="noPuedeCursar(element)"
-          class="ancho-75">
-            <option 
-            *ngFor="let opt of condiciones" 
-            [value]="opt.id" 
-            [selected]="opt.id === element.estado">
-              {{opt.estado}}
-            </option>
-          </select>
-        </td>
-      </ng-container>
+<ng-container matColumnDef="condicion">
+  <th mat-header-cell *matHeaderCellDef class="header ancho-55"> Condicion </th>
+  <td mat-cell *matCellDef="let element" class="ancho-55">
+    <select
+      (change)="onChange($event.target, element)"
+      [disabled]="noPuedeCursar(element)"
+      class="ancho-75">
+      @for (opt of condiciones; track opt) {
+        <option
+          [value]="opt.id"
+          [selected]="opt.id === element.estado">
+          {{opt.estado}}
+        </option>
+      }
+    </select>
+  </td>
+</ng-container>
 
-      
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row 
-        *matRowDef="let row; let i = dataIndex; columns: displayedColumns;"
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row
+  *matRowDef="let row; let i = dataIndex; columns: displayedColumns;"
         [ngClass]="{
           'resaltar': compararAnioAnterior(i,true),
           'fila-resaltada': row.condicionId === resaltadoId}"
-        [ngStyle]="obtenerEstado(row)"
-        >
-      </tr>
-      
-  </mat-table>
+  [ngStyle]="obtenerEstado(row)"
+  >
+</tr>
+
+</mat-table>
 </div>

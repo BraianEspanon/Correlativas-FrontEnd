@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
 import {DataSource} from '@angular/cdk/collections';
-import { CommonModule } from '@angular/common';
+
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
@@ -29,11 +29,10 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-listado-detalles',
-  standalone: true,
-  imports: [FormsModule, MatDialogTitle, MatCheckboxModule, MatTableModule, MatDialogContent, MatDialogActions, MatButtonModule, MatIconModule, MatDialogClose],
-  templateUrl: './listado-detalles.component.html',
-  styleUrl: './listado-detalles.component.css'
+    selector: 'app-listado-detalles',
+    imports: [FormsModule, MatDialogTitle, MatCheckboxModule, MatTableModule, MatDialogContent, MatDialogActions, MatButtonModule, MatIconModule, MatDialogClose],
+    templateUrl: './listado-detalles.component.html',
+    styleUrl: './listado-detalles.component.css'
 })
 
 export class ListadoDetallesComponent implements OnInit {
